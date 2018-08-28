@@ -1,0 +1,110 @@
+body {
+    margin: 0
+}
+.layout {
+    display: grid;
+    grid-template-columns: 1fr minmax(0px, 1024px) 1fr;
+    margin: auto;
+}
+.header-large {
+    display: grid;
+    grid-column: 2 / -2;
+    grid-row: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-gap: 10px;
+}
+.banner-large {
+    text-align: center;
+    font-size: 60px;
+    font-family: "Courier New", serif;
+    font-weight: bold;
+    color: white;
+    background: red;
+}
+.datetime {
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    color: white;
+    background: red;
+    padding-top: 35px;
+}
+.call-to-action {
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    background: red;
+    color: white;
+    text-align:right;
+    padding-right: 20px;
+    padding-top: 35px;
+}
+.hotbar {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+.hotbar-button {
+    background: lightgray;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header-small {
+    display: none
+}
+.content {
+    margin-top: 10px;
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 302px) minmax(200px, 400px) minmax(200px, 302px));
+    grid-gap: 10px;
+}
+.content-section {
+    background: lightblue;
+}
+.left-news-item {
+    padding: 20px;
+}
+.left-news-item-image {
+    width: 100%;
+}
+.center-news-item-image {
+    width: 100%;
+}
+.left-news-item-title {
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    color: #222;
+    margin-top: 15px;
+}
+
+
+@media (max-width: 800px) {
+    .layout {
+        display: block;
+        width: 100%;
+    }
+    .header-large {
+        display: none;
+    }
+    .banner-small {
+        width: 99%;
+        background: red;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: "Courier New", sans-serif;
+        padding-left: 10px;
+        color: white;
+    }
+    .header-small {
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
